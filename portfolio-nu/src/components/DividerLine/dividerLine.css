@@ -1,0 +1,80 @@
+.form-style{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-name: formChanger;
+    animation-duration: 5s;
+}
+
+.form-style2{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    animation-iteration-count: infinite;
+    animation-name: formChanger2;
+    animation-duration: 5s;
+}
+
+@keyframes formChanger {
+    0% { 
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+     }
+    25% { 
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+     }
+    50% {
+            height: 30px;
+            width: 0px;
+            border: 1px solid #fff;
+            rotate: 45deg;
+          }
+    75% { 
+        height: 30px;
+        width: 0px;
+        border: 1px solid #fff;
+        rotate: -45deg;
+     }
+    100% {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+     }
+  }
+
+  @keyframes formChanger2 {
+    0% { 
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+     }
+    25% { 
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+     }
+    50% {
+            height: 30px;
+            width: 0px;
+            border: 1px solid #fff;
+            rotate: -45deg;
+          }
+    75% { 
+        height: 30px;
+            width: 0px;
+            border: 1px solid #fff;
+            rotate: 45deg;
+     }
+    100% {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+    }
+  }
