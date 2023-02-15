@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import FifaSound from "../sounds/fifaopeningsound.mp3";
 
-const Sounds = () => {
+const Sounds = ({playStatus}) => {
     const [playSound, setPlaySound] = useState(false);
 
     useEffect(()=>{
@@ -17,7 +17,7 @@ const Sounds = () => {
           }
         }, []);
 
-        if(playSound === true){
+        if(playSound & playStatus){
             const audio = new Audio(FifaSound);
             audio.loop = false;
                 audio.play();

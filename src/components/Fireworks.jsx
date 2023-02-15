@@ -30,8 +30,8 @@ export default function App({playStatus}) {
                       firework.style.opacity = 0
                       setTimeout(()=>{
                           fireworkContainer.style.display = 'none'
-                      }, 3000)
-              }, 3000);
+                      }, 6000)
+              }, 6000);
             }
         }
     return (

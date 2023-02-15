@@ -5,6 +5,7 @@ html{
 }
 
 body {
+  overflow-y: hidden;
   background-color: #272727;
   color: white;
   font-family: 'Archivo', sans-serif;

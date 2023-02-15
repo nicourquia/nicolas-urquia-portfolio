@@ -5,7 +5,7 @@ const HomeDiv = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5% 0 0 0;
+    padding: 5% 0 1% 0;
 `
 const Name = styled.h3`
     font-weight: 900;

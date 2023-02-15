@@ -4,7 +4,7 @@ import Particles from './components/Particles';
 import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Projects from './components/Projects';
+//import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Home from './components/Home';
 import DividerLine from './components/DividerLine/DividerLine';
@@ -20,20 +20,24 @@ function App() {
     setPlayStatus(playStatus)
   }
 
+  if(playStatus){
+    document.body.style.overflowY = "scroll"; 
+  }
+
   return (
       <div className="App">
         <Fireworks playStatus={playStatus}/>
         <Curtain openPack={openPack}/>
         <Navbar/>
         <Home playStatus={playStatus}/>
-        <Sounds/>
+        <Sounds playStatus={playStatus}/>
         <DividerLine/>
         <About/>
         <DividerLine/>
         <Skills/>
         <DividerLine/>
-        <Projects/>
-        <DividerLine/>
+        {/* <Projects/> */}
+        {/* <DividerLine/> */}
         <Contact/>
         <Footer/>
         <Particles id="tsparticles" />

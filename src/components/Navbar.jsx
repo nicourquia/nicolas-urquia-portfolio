@@ -34,7 +34,7 @@ export default function Navbar(){
                 <a href="#skills">
                     <Button>Skills</Button>
                 </a>
-                <Button>Projects</Button>
+                {/* <Button>Projects</Button> */}
                 <a href="#contact">
                     <Button>Contact</Button>
                 </a>

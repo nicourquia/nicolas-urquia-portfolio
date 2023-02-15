@@ -8,6 +8,7 @@ const breatheAnimation = keyframes`
  100% { box-shadow: 0px 0px 30px #ffcd43c0, 0px 30px 40px #000000; margin-bottom: 0px }
 `
 const Div = styled.div`
+    overflow-y: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -16,6 +17,14 @@ const Div = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`
+const ClickMe = styled.h2`
+    font-weight: 900;
+    font-style: italic;
+    font-size: 24px;
+    position: absolute;
+    left: 22%;
+    transition: 0.3s;
 `
 const Pack = styled.img`
     width: 18%;
@@ -34,6 +43,7 @@ const Curtain = ({openPack}) => {
     const [click, setClick] = useState(false)
     let frontCurtain = null;
     let pack = null;
+    let clickMe = null;
 
     useEffect(()=>{
         const onPageLoad = () => {
@@ -49,8 +59,10 @@ const Curtain = ({openPack}) => {
     function openCard(){
         setClick(true)
         if(playAnimation === true && click === true){
+            clickMe = document.getElementById('click-me-id')
             pack = document.getElementById('pack-id')
             console.log('Brillo')
+            clickMe.style.opacity = 0
             pack.style.filter = 'brightness(100)'
         }
         if(playAnimation === true && click === true){
@@ -65,6 +77,7 @@ const Curtain = ({openPack}) => {
     
     return(
         <Div id='front-curtain'>
+            <ClickMe id='click-me-id'>DOUBLE CLICK <br/>TO OPEN→</ClickMe>
             <Pack src={IconPack} onClick={() => {openPack(click); openCard()}} id='pack-id'/>
         </Div>
     )
